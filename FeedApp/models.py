@@ -16,6 +16,9 @@ class Profile(models.Model):
     created = models.DateTimeField(auto_now=True)
     updated = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f"{self.user.username}"
+
 STATUS_CHOICES = (
     ('sent' , 'sent'),
     ('accepted' , 'accepted')
